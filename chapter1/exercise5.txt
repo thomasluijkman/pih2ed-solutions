@@ -1,0 +1,29 @@
+Exercise:
+What would be the effect of replacing <= by < in the original definition of
+qsort? Hint: consider the example qsort [2,2,3,1,1]
+
+If <= would be replaced by <, all duplicates of an item in the list would be removed.
+Afterwards, the list would be sorted without the duplicates.
+This can be proven by evaluating qsort [2,2,3,1,1] using the following definition:
+
+qsort []        = []
+qsort (x:xs)    = qsort smaller ++ [x] ++ qsort larger
+                  where
+                    smaller = [a | a <- xs, a < x]
+                    larger  = [b | b <- xs, b > x]
+
+Evaluating this version of qsort goes as follows:
+qsort [2,2,3,1,1]
+=   {applying qsort}
+qsort [1,1] ++ [2] ++ qsort [3]
+=   {applying first qsort}
+(qsort [] ++ [1] ++ qsort []) ++ [2] ++ (qsort [] ++ [3] ++ qsort [])
+=   {applying qsort}
+([] ++ [1] ++ []) ++ [2] ++ ([] ++ [3] ++ [])
+=   {applying ++}
+[1] ++ [2] ++ [3]
+=   {applying ++}
+[1,2,3]
+
+As is visible, the list is now in a sorted order, however the duplicate 1 and 2 have been
+removed.

@@ -1,0 +1,9 @@
+Exercise:
+How should the definition of the function qsort be modified so that it pro-
+duces a reverse sorted version of a list?
+
+qsort []        = []
+qsort (x:xs)    = qsort larger ++ [x] ++ qsort smaller
+                  where
+                    larger  = [a | a <- xs, a >= x]
+                    smaller = [b | b <- xs, b < x]
