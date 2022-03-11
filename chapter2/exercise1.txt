@@ -1,0 +1,5 @@
+Exercise:
+Work through the examples from this chapter using GHCi.
+
+This solution can not be conveyed in this way -- it is
+left to the reader to do this.
