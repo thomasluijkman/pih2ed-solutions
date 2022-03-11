@@ -1,0 +1,19 @@
+Exercise:
+Why is it not feasible in general for function types to be instances of the Eq
+class? When is it feasible? Hint: two functions of the same type are equal if
+they always return equal results for equal arguments.
+
+It is generally not feasible for function types to be instances of the Eq class
+because functions generally take arguments that are of types which can have
+a very large amount of different elements. 
+
+Take two functions which take one argument belonging to the Int class (which 
+takes numbers from -2^64 to 2^64 - 1). To test if these functions are equal,
+you would have to go through each individual number and test if the output
+is the same. This is generally infeasible due to the amount of time it will
+take.
+
+For smaller types, like Bool and maybe even Char, this would be feasible. Bool
+for example can only take on two values: True and False. It does not take too
+much time to compare the inputs and outputs of two functions that take Bool
+arguments.

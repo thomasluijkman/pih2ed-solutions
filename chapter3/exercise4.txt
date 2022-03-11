@@ -1,0 +1,5 @@
+Exercise:
+Check your answers to the preceding three chapters using GHCi.
+
+This solution can not be conveyed in this way -- it is
+left to the reader to do this.
