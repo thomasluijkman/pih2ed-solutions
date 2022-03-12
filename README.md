@@ -4,7 +4,7 @@ Graham Hutton's book "Programming In Haskell 2nd Edition".
 I will continue working on this repository until it is
 finished.
 
-Currently, the repository holds the solutions for chapters 1, 2, 3, 4 and 5.
+Currently, the repository holds the solutions for chapters 1, 2, 3, 4, 5 and 6.
 
 DISCLAIMER: I am a CS student myself and do not have the
 official solutions myself. Exercises which contain an answer
